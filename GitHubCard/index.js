@@ -70,6 +70,35 @@ function gitHubCard(gitInfo) {
       </div>
     </div>
 */
+cardInfo.classList.add('card-info');
+name.classList.add('name');
+login.classList.add('username');
+
+img.src = gitInfo.avatar_url;
+img.alt = 'github user';
+name.textContent = gitInfo.name;
+login.textContent = gitInfo.login;
+location.textContent = gitInfo.location;
+profile.textContent = "Profile";
+profileLink.textContent = "Link to Profile";
+profileLink.href = gitInfo.html_url;
+followers.textContent = 'Folowers: ${gitInfo.followers}';
+following.textContent = 'Following: ${gitInfo.following';
+bio.textContent = gitInfo.bio;
+
+card.appendChild(img);
+card.appendChild(cardInfo);
+cardInfo.appendChild(name);
+cardInfo.appendChild(login);
+cardInfo.appendChild(location);
+cardInfo.appendChild(profile);
+cardInfo.appendChild(profileLink);
+cardInfo.appendChild(followers);
+cardInfo.appendChild(following);
+cardInfo.appendChild(bio);
+
+return card;
+} card.classList.add('card');
 
 /*
   List of LS Instructors Github username's:
